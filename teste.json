@@ -1,0 +1,42 @@
+{
+    "nome_aluno": "Lucas Jatene Tobias",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "instrutor",
+        "cpf": "586.***.***-**",
+        "nome": "JORGE LUIZ VILHENA DA CUNHA",
+        "evento": "Abertura",
+        "codigo_validacao": "e03balce17317b32ba2ca0d9d757340f",
+        "hora": "06:48:45",
+        "imagem_base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."
+      },
+      {
+        "autor": "aluno",
+        "cpf": "037.***.***-**",
+        "nome": "LUCAS JATENE TOBIAS",
+        "evento": "Abertura",
+        "codigo_validacao": "523ea43099c977d4c82aec6a67cd8df0",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "instrutor",
+        "cpf": "586.***.***-**",
+        "nome": "JORGE LUIZ VILHENA DA CUNHA",
+        "evento": "Fechamento",
+        "codigo_validacao": "e03balce17317b32ba2ca0d9d757340f",
+        "hora": "06:48:45",
+        "imagem_base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."
+      },
+      {
+        "autor": "aluno",
+        "cpf": "037.***.***-**",
+        "nome": "LUCAS JATENE TOBIAS",
+        "evento": "Fechamento",
+        "codigo_validacao": "523ea43099c977d4c82aec6a67cd8df0",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  }

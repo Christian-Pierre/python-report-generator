@@ -1,0 +1,17 @@
+[
+    {
+      "titulo": "Relatório de Vendas",
+      "dados": [
+        { "produto": "Caderno", "preco": 12.50 },
+        { "produto": "Caneta", "preco": 3.20 }
+      ]
+    },
+    {
+      "titulo": "Relatório de Estoque",
+      "dados": [
+        { "item": "Mouse", "quantidade": 15 },
+        { "item": "Teclado", "quantidade": 7 }
+      ]
+    }
+  ]
+  

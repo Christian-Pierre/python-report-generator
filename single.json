@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Relatório de Vendas",
+    "dados": [
+      { "produto": "Lápis", "preco": 1.50 },
+      { "produto": "Borracha", "preco": 2.00 },
+      { "produto": "Apontador", "preco": 2.50 },
+      { "produto": "Mochila", "preco": 89.90 },
+      { "produto": "Estojo", "preco": 15.00 },
+      { "produto": "Marca-texto", "preco": 4.20 },
+      { "produto": "Régua", "preco": 3.10 },
+      { "produto": "Cola", "preco": 5.60 },
+      { "produto": "Tesoura", "preco": 7.40 },
+      { "produto": "Caderno de Desenho", "preco": 18.90 }
+    ]
+  }
+]

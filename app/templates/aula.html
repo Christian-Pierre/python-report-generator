@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ titulo }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 6px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    .imagem {
+      text-align: center;
+    }
+    .imagem img {
+      width: 90px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .footer {
+      font-size: 10px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>{{ titulo }}</h1>
+  <h3>Data da Aula Prática - {{ data_hora }}</h3>
+    <p> Aluno: {{ nome_aluno }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>ORIGEM</th>
+        <th>CPF<br>NOME</th>
+        <th>EVENTO<br>COD.VALIDAÇÃO</th>
+        <th>HORA</th>
+        <th>IMAGEM</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for b in biometrias %}
+      <tr>
+        <td>{{ b.autor | capitalize }}</td>
+        <td>{{ b.cpf }}<br>{{ b.nome }}</td>
+        <td>{{ b.evento }}<br>{{ b.codigo_validacao }}</td>
+        <td>{{ b.hora }}</td>
+        <td class="imagem">
+          <img src="{{ b.imagem_base64 }}" alt="Imagem da biometria">
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Dados de Validação Aleatória
+  </div>
+
+</body>
+</html>
