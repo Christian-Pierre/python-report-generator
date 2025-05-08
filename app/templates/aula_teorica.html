@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ titulo or "Relatório de Aula Teórica" }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      font-size: 12px;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 6px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      width: 30%;
+    }
+
+    .imagem {
+      text-align: center;
+    }
+
+    .imagem img {
+      width: 120px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    .quebra-pagina {
+      page-break-after: always;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Relatório de Aula Teórica</h1>
+
+  <table>
+    <tr>
+      <th>Nome do Aluno</th>
+      <td>{{ aluno.nome_aluno }}</td>
+    </tr>
+    <tr>
+      <th>Data/Hora da Aula</th>
+      <td>{{ aluno.data_hora_aula }}</td>
+    </tr>
+  </table>
+
+  <h2>Biometrias</h2>
+
+  {% for biometria in aluno.biometrias %}
+  <table style="margin-bottom: 20px;">
+    <tr>
+      <th>Evento</th>
+      <td>{{ biometria.evento }}</td>
+    </tr>
+    <tr>
+      <th>Nome</th>
+      <td>{{ biometria.nome }}</td>
+    </tr>
+    <tr>
+      <th>CPF</th>
+      <td>{{ biometria.cpf }}</td>
+    </tr>
+    <tr>
+      <th>Hora</th>
+      <td>{{ biometria.hora }}</td>
+    </tr>
+    <tr>
+      <th>Código de Validação</th>
+      <td>{{ biometria.codigo_validacao }}</td>
+    </tr>
+    {% if biometria.imagem_base64 %}
+    <tr>
+      <th>Biometria</th>
+      <td class="imagem">
+        <img src="{{ biometria.imagem_base64 }}" alt="Biometria">
+      </td>
+    </tr>
+    {% endif %}
+  </table>
+  {% endfor %}
+
+</body>
+
+</html>

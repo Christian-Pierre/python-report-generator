@@ -1,0 +1,122 @@
+[
+  {
+    "nome_aluno": "Ana Beatriz Martins",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "aluno",
+        "cpf": "123.***.***-**",
+        "nome": "ANA BEATRIZ MARTINS",
+        "evento": "Abertura",
+        "codigo_validacao": "a1b2c3d4e5f67890abcd1234ef567890",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "aluno",
+        "cpf": "123.***.***-**",
+        "nome": "ANA BEATRIZ MARTINS",
+        "evento": "Fechamento",
+        "codigo_validacao": "a1b2c3d4e5f67890abcd1234ef567890",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  },
+  {
+    "nome_aluno": "Bruno Carvalho Lima",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "aluno",
+        "cpf": "234.***.***-**",
+        "nome": "BRUNO CARVALHO LIMA",
+        "evento": "Abertura",
+        "codigo_validacao": "b2c3d4e5f67890abcd1234ef567890a1",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "aluno",
+        "cpf": "234.***.***-**",
+        "nome": "BRUNO CARVALHO LIMA",
+        "evento": "Fechamento",
+        "codigo_validacao": "b2c3d4e5f67890abcd1234ef567890a1",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  },
+  {
+    "nome_aluno": "Carla Souza Ferreira",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "aluno",
+        "cpf": "345.***.***-**",
+        "nome": "CARLA SOUZA FERREIRA",
+        "evento": "Abertura",
+        "codigo_validacao": "c3d4e5f67890abcd1234ef567890a1b2",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "aluno",
+        "cpf": "345.***.***-**",
+        "nome": "CARLA SOUZA FERREIRA",
+        "evento": "Fechamento",
+        "codigo_validacao": "c3d4e5f67890abcd1234ef567890a1b2",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  },
+  {
+    "nome_aluno": "Diego Ramos Silva",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "aluno",
+        "cpf": "456.***.***-**",
+        "nome": "DIEGO RAMOS SILVA",
+        "evento": "Abertura",
+        "codigo_validacao": "d4e5f67890abcd1234ef567890a1b2c3",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "aluno",
+        "cpf": "456.***.***-**",
+        "nome": "DIEGO RAMOS SILVA",
+        "evento": "Fechamento",
+        "codigo_validacao": "d4e5f67890abcd1234ef567890a1b2c3",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  },
+  {
+    "nome_aluno": "Eduarda Melo Rocha",
+    "data_hora_aula": "2024-04-18T06:48:45",
+    "biometrias": [
+      {
+        "autor": "aluno",
+        "cpf": "567.***.***-**",
+        "nome": "EDUARDA MELO ROCHA",
+        "evento": "Abertura",
+        "codigo_validacao": "e5f67890abcd1234ef567890a1b2c3d4",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      },
+      {
+        "autor": "aluno",
+        "cpf": "567.***.***-**",
+        "nome": "EDUARDA MELO ROCHA",
+        "evento": "Fechamento",
+        "codigo_validacao": "e5f67890abcd1234ef567890a1b2c3d4",
+        "hora": "07:55:10",
+        "imagem_base64": "data:image/png;base64,"
+      }
+    ]
+  }
+]

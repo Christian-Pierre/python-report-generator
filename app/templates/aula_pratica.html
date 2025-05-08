@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>{{ titulo }}</title>
@@ -8,36 +9,44 @@
       font-family: Arial, sans-serif;
       margin: 40px;
     }
+
     h1 {
       text-align: center;
       font-size: 20px;
       margin-bottom: 30px;
       text-transform: uppercase;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 40px;
       font-size: 12px;
     }
-    th, td {
+
+    th,
+    td {
       border: 1px solid #000;
       padding: 6px;
       vertical-align: top;
       text-align: left;
     }
+
     th {
       background-color: #f0f0f0;
       text-align: center;
     }
+
     .imagem {
       text-align: center;
     }
+
     .imagem img {
       width: 90px;
       height: auto;
       border: 1px solid #ccc;
     }
+
     .footer {
       font-size: 10px;
       text-align: center;
@@ -46,11 +55,12 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>{{ titulo }}</h1>
   <h3>Data da Aula Prática - {{ data_hora }}</h3>
-    <p> Aluno: {{ nome_aluno }}</p>
+  <p> Aluno: {{ nome_aluno }}</p>
   <table>
     <thead>
       <tr>
@@ -58,7 +68,7 @@
         <th>CPF<br>NOME</th>
         <th>EVENTO<br>COD.VALIDAÇÃO</th>
         <th>HORA</th>
-        <th>IMAGEM</th>
+        <th>BIOMETRIA</th>
       </tr>
     </thead>
     <tbody>
@@ -81,4 +91,5 @@
   </div>
 
 </body>
+
 </html>

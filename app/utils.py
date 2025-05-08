@@ -30,7 +30,7 @@ def multiplos_json_para_html(json_data):
     except Exception as e:
         raise ValueError(f"Erro ao processar relatórios: {e}")
 
-def aula_para_html(data):
+def aula_pratica_para_html(data):
     try:
         parsed = json.loads(data)
     except:
@@ -85,10 +85,29 @@ def aula_para_html(data):
         if not img.startswith("data:image"):
             b["imagem_base64"] = f"data:image/png;base64,{img.strip()}"
 
-    template = env.get_template("aula.html")
+    template = env.get_template("aula_pratica.html")
     return template.render(
         titulo="Relatório de Aula Prática",
         nome_aluno=nome_aluno,
         data_hora=data_formatada,
         biometrias=biometrias
     )
+
+def aula_teorica_para_html(data):
+    try:
+        alunos = json.loads(data)
+    except Exception as e:
+        raise ValueError(f"JSON inválido: {e}")
+
+    if not isinstance(alunos, list):
+        raise ValueError("Esperado uma lista de alunos no JSON.")
+
+    template = env.get_template("aula_teorica.html")
+
+    paginas = []
+    for aluno in alunos:
+        html = template.render(aluno=aluno)
+        paginas.append(f'<div style="page-break-after: always;">{html}</div>')
+
+    html_total = "<html><body>" + "".join(paginas) + "</body></html>"
+    return html_total

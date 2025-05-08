@@ -38,11 +38,21 @@ curl -X POST http://localhost:5000/generate-multi \
   --output relatorios.pdf
 ```
 
-### 📚 Gerar relatório de aula
+### 📚 Gerar relatório de aula pratica
 
 ```bash
-curl -X POST http://localhost:5000/relatorio-aula \
+curl -X POST http://localhost:5000/relatorio-aula-pratica \
   -F "file=@aula.json" \
+  --output relatorio_aula.pdf
+```
+
+---
+
+### 📚 Gerar relatório de aula teorica
+
+```bash
+curl -X POST http://localhost:5000/relatorio-aula-teorica \
+  -F "file=@multi-aula.json" \
   --output relatorio_aula.pdf
 ```
 
