@@ -93,21 +93,37 @@ def aula_pratica_para_html(data):
         biometrias=biometrias
     )
 
-def aula_teorica_para_html(data):
-    try:
-        alunos = json.loads(data)
-    except Exception as e:
-        raise ValueError(f"JSON inválido: {e}")
 
-    if not isinstance(alunos, list):
-        raise ValueError("Esperado uma lista de alunos no JSON.")
-
+def aula_teorica_para_html(data_json):
     template = env.get_template("aula_teorica.html")
 
-    paginas = []
-    for aluno in alunos:
-        html = template.render(aluno=aluno)
-        paginas.append(f'<div style="page-break-after: always;">{html}</div>')
+    instrutor_nome = data_json.get("instrutorNome", "N/A")
+    instrutor_cpf = data_json.get("cpfInstrutor", "N/A")
+    lista_alunos = data_json.get("listaAlunos", [])
 
-    html_total = "<html><body>" + "".join(paginas) + "</body></html>"
-    return html_total
+    htmls = []
+
+    for aluno_data in lista_alunos:
+        biometrias = aluno_data.get("biometrias", [])
+        
+        # Normaliza as imagens base64
+        for b in biometrias:
+            img = b.get("imagem_base64", "")
+            if img and not img.startswith("data:image"):
+                b["imagem_base64"] = f"data:image/png;base64,{img.strip()}"
+
+        context = {
+            "titulo": "Relatório de Aula Teórica",
+            "instrutor_nome": instrutor_nome,
+            "instrutor_cpf": instrutor_cpf,
+            "aluno": {
+                "nome": aluno_data.get("nome_aluno"),
+                "cpf": aluno_data.get("cpf_aluno"),
+                "data_hora_aula": aluno_data.get("data_hora_aula", "N/A"),
+                "biometrias": biometrias
+            }
+        }
+        html = template.render(context)
+        htmls.append(html)
+
+    return htmls

@@ -17,10 +17,15 @@
       text-transform: uppercase;
     }
 
+    h2 {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       font-size: 12px;
     }
 
@@ -42,8 +47,8 @@
     }
 
     .imagem img {
-      width: 120px;
-      height: auto;
+      height: 120px;
+      width: auto;
       border: 1px solid #ccc;
       margin-top: 5px;
     }
@@ -51,28 +56,53 @@
     .quebra-pagina {
       page-break-after: always;
     }
+
+    .mensagem-vazia {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
   </style>
+
 </head>
 
 <body>
 
-  <h1>Relatório de Aula Teórica</h1>
+  <h1>{{ titulo or "Relatório de Aula Teórica" }}</h1>
+
+  <table>
+    <tr>
+      <th>Nome do Instrutor</th>
+      <td>{{ instrutor_nome }}</td>
+    </tr>
+    <tr>
+      <th>CPF do Instrutor</th>
+      <td>{{ instrutor_cpf }}</td>
+    </tr>
+  </table>
+
+  <hr style="margin: 40px 0;">
 
   <table>
     <tr>
       <th>Nome do Aluno</th>
-      <td>{{ aluno.nome_aluno }}</td>
+      <td>{{ aluno.nome }}</td>
+    </tr>
+    <tr>
+      <th>CPF do Aluno</th>
+      <td>{{ aluno.cpf }}</td>
     </tr>
     <tr>
       <th>Data/Hora da Aula</th>
-      <td>{{ aluno.data_hora_aula }}</td>
+      <td>{{ aluno.data_hora_aula or "Não informada" }}</td>
     </tr>
   </table>
 
   <h2>Biometrias</h2>
 
+  {% if aluno.biometrias and aluno.biometrias | length > 0 %}
   {% for biometria in aluno.biometrias %}
-  <table style="margin-bottom: 20px;">
+  <table>
     <tr>
       <th>Evento</th>
       <td>{{ biometria.evento }}</td>
@@ -97,12 +127,15 @@
     <tr>
       <th>Biometria</th>
       <td class="imagem">
-        <img src="{{ biometria.imagem_base64 }}" alt="Biometria">
+        <img src="{{ biometria.imagem_base64 }}" alt="Imagem da Biometria">
       </td>
     </tr>
     {% endif %}
   </table>
   {% endfor %}
+  {% else %}
+  <p class="mensagem-vazia">Nenhuma biometria registrada para este aluno.</p>
+  {% endif %}
 
 </body>
 

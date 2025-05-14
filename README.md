@@ -52,7 +52,7 @@ curl -X POST http://localhost:5000/relatorio-aula-pratica \
 
 ```bash
 curl -X POST http://localhost:5000/relatorio-aula-teorica \
-  -F "file=@multi-aula.json" \
+  -F "file=@aula-teorica.json" \
   --output relatorio_aula.pdf
 ```
 
